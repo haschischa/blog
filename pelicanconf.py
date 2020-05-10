@@ -33,6 +33,9 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+PLUGIN_PATHS = ['plugins/']
 from pelican.plugins import pelican_jupyter_reader
-PLUGINS = [pelican_jupyter_reader]
+PLUGINS = [pelican_jupyter_reader, 'i18n_subsites']
 IGNORE_FILES = ['*checkpoint.ipynb']
+THEME = 'theme'
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
